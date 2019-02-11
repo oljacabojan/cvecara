@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="main.js"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <h1>Cvećara</h1>
+    </header>
+    <main>
+        <form action="./confirmation.html" method="GET" onsubmit="store()">
+            <table>
+
+                <caption>Sadržaj aranžmana / Ukupna cena: <input type="number" id="ukupnoukupno">&nbsp;dinara&nbsp;<button>Potvrdi kupovinu</button></caption>
+
+                <tbody>
+                    <tr>
+                        <th rowspan="2">Ruža</th>
+                        <th>Po komadu:</th>
+                        <th>Količina:</th>
+                        <th>Ukupna cena:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="180" disabled="disabled" id="cena1" class="cena">&nbsp;dinara</td>
+                        <td><input type="number" placeholder="0" id="kolicina1" class="kolicina" oninput="oneOrder1()"></td>
+                        <td><input type="number" placeholder="0" disabled="disabled" id="ukupno1" class="ukupno">&nbsp;dinara</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Ljiljan</th>
+                        <th>Po komadu:</th>
+                        <th>Količina:</th>
+                        <th>Ukupna cena:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="250" disabled="disabled" id="cena2" class="cena">&nbsp;dinara</td>
+                        <td><input type="number" placeholder="0" id="kolicina2" class="kolicina" oninput="oneOrder2()"></td>
+                        <td><input type="number" placeholder="0" disabled="disabled" id="ukupno2" class="ukupno">&nbsp;dinara</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Gerber</th>
+                        <th>Po komadu:</th>
+                        <th>Količina:</th>
+                        <th>Ukupna cena:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" value="305" disabled="disabled" id="cena3" class="cena">&nbsp;dinara</td>
+                        <td><input type="number" placeholder="0" id="kolicina3" class="kolicina" oninput="oneOrder3()"></td>
+                        <td><input type="number" placeholder="0" disabled="disabled" id="ukupno3" class="ukupno">&nbsp;dinara</td>
+                    </tr>
+                <tbody>
+
+            </table>
+        </form>
+
+    </main>
+
+    <script>
+        
+        function oneOrder1() {
+            var a = document.getElementById('cena1').value;
+            var b = document.getElementById('kolicina1').value;
+
+            document.getElementById('ukupno1').value = a * b;
+            oneOrder()
+        }
+
+        function oneOrder2() {
+            var a = document.getElementById('cena2').value;
+            var b = document.getElementById('kolicina2').value;
+
+            document.getElementById('ukupno2').value = a * b;
+            oneOrder()
+        }
+
+        function oneOrder3() {
+            var a = document.getElementById('cena3').value;
+            var b = document.getElementById('kolicina3').value;
+
+            document.getElementById('ukupno3').value = a * b;
+            oneOrder()
+        }
+
+        function oneOrder() {
+            var a = document.getElementById('ukupno1').value-0;
+            var b = document.getElementById('ukupno2').value-0;
+            var c = document.getElementById('ukupno3').value-0;
+
+            document.getElementById('ukupnoukupno').value = a + b + c;
+        }
+
+    </script>
+</body>
+
+</html>

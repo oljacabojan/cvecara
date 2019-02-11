@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+table, th, tr, td {
+    border: 2px solid #1C1B20;
+    border-collapse: collapse;
+    color: #1C1B20;
+}
+
+table {
+    width: 100%;
+    background-color: #ff4040;
+}
+
+caption {
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody th:nth-child(1){
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #1C1B20;
+    background-color: #ff4040;
+    padding: 10px;
+    border: 1px solid #1C1B20;
+}
